@@ -53,7 +53,7 @@ const TestMakerOracle = artifacts.require('TestMakerOracle');
 const TestOasisDex = artifacts.require('TestOasisDex');
 const TestInterestSetter = artifacts.require('TestInterestSetter');
 const TestPolynomialInterestSetter = artifacts.require('TestPolynomialInterestSetter');
-const TestExchangeWrapper = artifacts.require('TestExchangeWrapper');
+//const TestExchangeWrapper = artifacts.require('TestExchangeWrapper');
 const WETH9 = artifacts.require('WETH9');
 
 // Second-Layer Contracts
@@ -102,7 +102,7 @@ async function deployTestContracts(deployer, network) {
       deployer.deploy(OmiseToken),
       deployer.deploy(TestLib),
       deployer.deploy(TestAutoTrader),
-      deployer.deploy(TestExchangeWrapper),
+      //deployer.deploy(TestExchangeWrapper),
       deployer.deploy(TestPolynomialInterestSetter, getPolynomialParams(network)),
       deployer.deploy(TestMakerOracle),
       deployer.deploy(TestOasisDex),

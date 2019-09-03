@@ -10,7 +10,8 @@ function isDevNetwork(network) {
       || network.startsWith('develop')
       || network.startsWith('dev')
       || network.startsWith('docker')
-      || network.startsWith('coverage');
+      || network.startsWith('coverage')
+      || network.startsWith('matic');
 }
 
 function isMainNet(network) {
@@ -43,6 +44,9 @@ function getChainId(network) {
   }
   if (network.startsWith('test') || network.startsWith('test_ci')) {
     return 1001;
+  }
+  if (network.startsWith('matic')) {
+    return 8995;
   }
   throw new Error('No chainId for network', network);
 }

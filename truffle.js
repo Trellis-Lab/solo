@@ -77,6 +77,14 @@ module.exports = {
       port: 8545,
       gasPrice: 1,
     },
+    matic: {
+      provider: function() {
+        return new HDWalletProvider("gesture rather obey video awake genuine patient base soon parrot upset lounge", 'https://testnet2.matic.network', 0,1)
+      },
+      network_id: 8995,
+      gas: 8000000,
+      gasPrice: 0,
+    },
   },
   // migrations_file_extension_regexp: /.*\.ts$/, truffle does not currently support ts migrations
 };
